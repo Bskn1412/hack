@@ -12,7 +12,7 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")  # Enable WebSocket
 
 # Configure API Keys
-GEMINI_API_KEY = "AIzaSyBNAZnOE_670PQ1NO0Inq87L1rGjewCqls"
+GEMINI_API_KEY = "MY_API_KEY"
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Load Embedding Model
@@ -76,3 +76,4 @@ def handle_question(data):
 
 if __name__ == "__main__":
     socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+
